@@ -25,6 +25,9 @@ return require('packer').startup(function(use)
     use 'sainnhe/gruvbox-material'
     use 'morhetz/gruvbox'
 
+    -- Dim inactive windows
+    use 'TaDaa/vimade'
+
     -- Git
     use 'airblade/vim-gitgutter' -- Git status in gutter
     use 'tpope/vim-fugitive'
