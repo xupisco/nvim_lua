@@ -16,6 +16,8 @@ wk.register({
     ["<leader>e"] = { ":NvimTreeToggle<CR>", "File Explorer" },
     ["<leader>ee"] = { ":NvimTreeFindFileToggle<CR>", "File Explorer (select)" },
     ["<leader>q"] = { ":nohl<CR>", "Clear search" },
+    ["<leader>c"] = { ":bp | sp | bn | bd<CR>", "Delete buffer" },
+    ["h"] = { name = "Git Gutter" },
 })
 
 -- Telescope
@@ -40,5 +42,17 @@ wk.register({
         g = { "<cmd>G<cr>", "Show changes" },
         d = { "<cmd>G diff<cr>", "Diff" },
         l = { "<cmd>G log<cr>", "Log" },
+    },
+}, { prefix = "<leader>" })
+
+
+-- Window Management
+wk.register({
+    w = {
+        name = "Window",
+        x = { "<cmd>q<cr>", "Close pane" },
+        X = { "<cmd>bd<cr>", "Close buffer" },
+        s = { "<C-W>s<cr>", "Split below" },
+        r = { "<C-W>sv<cr>", "Split right" },
     },
 }, { prefix = "<leader>" })

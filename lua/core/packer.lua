@@ -81,11 +81,13 @@ return require('packer').startup(function(use)
     }
 
     -- Better errors
-    -- Lua
     use {
         "folke/trouble.nvim",
         requires = "nvim-tree/nvim-web-devicons",
     }
+
+    -- Terminal
+    use 'voldikss/vim-floaterm'
 
     if packer_bootstrap then
         require('packer').sync()
