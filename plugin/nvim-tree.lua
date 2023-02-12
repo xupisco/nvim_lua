@@ -4,6 +4,11 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+local gheight = vim.api.nvim_list_uis()[1].height
+local gwidth = vim.api.nvim_list_uis()[1].width
+local width = 70
+local height = 40
+
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
@@ -26,10 +31,10 @@ require("nvim-tree").setup({
             open_win_config = {
                 relative = "editor",
                 border = "rounded",
-                width = 30,
-                height = 30,
-                row = 1,
-                col = 1,
+                width = width,
+                height = height,
+                row = (gheight - height) * 0.5,
+                col = (gwidth - width) * 0.5,
             },
         },
     },

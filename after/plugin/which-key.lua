@@ -52,7 +52,7 @@ wk.register({
         name = "Window",
         x = { "<cmd>q<cr>", "Close pane" },
         X = { "<cmd>bd<cr>", "Close buffer" },
-        s = { "<C-W>s<cr>", "Split below" },
-        r = { "<C-W>sv<cr>", "Split right" },
+        s = { "<cmd>split<cr>", "Split below" },
+        r = { "<cmd>vsplit<cr>", "Split right" },
     },
 }, { prefix = "<leader>" })

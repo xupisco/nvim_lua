@@ -89,6 +89,23 @@ return require('packer').startup(function(use)
     -- Terminal
     use 'voldikss/vim-floaterm'
 
+    -- Active mode in line indicator
+    use {
+        'mawkler/modicator.nvim',
+        after = 'gruvbox-material', -- Add your colorscheme plugin here
+        setup = function()
+            -- These are required for Modicator to work
+            vim.o.cursorline = true
+            vim.o.number = true
+            vim.o.termguicolors = true
+        end,
+        config = function()
+            require('modicator').setup({
+                -- ...
+            })
+        end
+    }
+
     if packer_bootstrap then
         require('packer').sync()
     end
