@@ -11,6 +11,6 @@ vim.g['startify_lists'] = {
 }
 
 vim.g['startify_bookmarks'] = {
-    { i = '~/.config/nvim/init.vim' },
+    { i = '~/.config/nvim' },
     { p = '~/projects' },
 }

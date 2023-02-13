@@ -10,14 +10,14 @@ local lsp = require('lsp-zero').preset({
 lsp.setup_nvim_cmp({
     documentation = {
         col_offset = 0,
-        side_padding = 2,
+        border = 'none',
+        side_padding = 4,
         winhighlight = 'Normal:TelescopeNormal,FloatBorder:TelescopeBorder',
         zindex = 1001
     }
 })
 
 lsp.setup()
-
 
 vim.api.nvim_create_autocmd("CursorHold", {
     buffer = bufnr,

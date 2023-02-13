@@ -9,7 +9,7 @@ require("gruvbox").setup({
     invert_tabline = false,
     invert_intend_guides = false,
     inverse = true, -- invert background for search, diffs, statuslines and errors
-    contrast = '', -- can be "hard", "soft" or empty string
+    contrast = 'hard', -- can be "hard", "soft" or empty string
     palette_overrides = {},
     overrides = {},
     dim_inactive = false,
@@ -22,13 +22,14 @@ function setTheme(theme, set_custom)
     set_custom = set_custom or false
 
     vim.opt.termguicolors = true
+    vim.opt.background = 'dark'
     vim.cmd.colorscheme(theme)
 
     if set_custom == true then
-        --vim.g.gruvbox_material_background = 'medium'
-        --vim.g.gruvbox_material_colors_override = { bg0 = {'#222222', '235'} }
-        --vim.g.gruvbox_material_statusline_style = 'default'
-        --vim.g.gruvbox_material_foreground = 'original'
+        vim.g.gruvbox_material_background = 'medium'
+        vim.g.gruvbox_material_colors_override = { bg0 = {'#222222', '235'} }
+        vim.g.gruvbox_material_statusline_style = 'default'
+        vim.g.gruvbox_material_foreground = 'original'
 
         vim.api.nvim_set_hl(0, 'Normal', { bg = '#222222' })
         vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#191919' })
@@ -36,6 +37,9 @@ function setTheme(theme, set_custom)
         vim.api.nvim_set_hl(0, 'TelescopeBorder', {bg = '#191919' })
         vim.api.nvim_set_hl(0, 'Float', { bg = '#191919' })
         vim.api.nvim_set_hl(0, 'FloatBorder', { bg = '#191919' })
+
+        vim.api.nvim_set_hl(0, 'Pmenu', { bg = '#191919' })
+        vim.api.nvim_set_hl(0, 'PmenuSel', { bg = '#ebdbb2', fg = '#191919' })
 
         vim.api.nvim_set_hl(0, 'DiagnosticFloatingError', { bg = '#191919', fg = '#cc5547' })
         vim.api.nvim_set_hl(0, 'DiagnosticFloatingHint', { bg = '#191919', fg = '#83A598' })
@@ -48,4 +52,4 @@ function setTheme(theme, set_custom)
 
 end
 
-setTheme('gruvbox', true)
+setTheme('gruvbox-material', true)
