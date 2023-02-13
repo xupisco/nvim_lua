@@ -17,9 +17,9 @@ modicator.setup({
     -- italic key pair to override the default highlight for a specific mode if
     -- you would like.
     modes = {
-      ['n'] = { foreground = '#eeeeee' },
-      ['i']  = { foreground = '#a9b665' },
-      ['v']  = { foreground = '#ea6962' },
+      ['n'] = { foreground = '#87d787' },
+      ['i']  = { foreground = '#5fafff' },
+      ['v']  = { foreground = '#d787d7' },
     },
   },
 })
