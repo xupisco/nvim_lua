@@ -192,6 +192,11 @@ _G.packer_plugins = {
     path = "/home/leandro/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
   },
+  vim = {
+    loaded = true,
+    path = "/home/leandro/.local/share/nvim/site/pack/packer/start/vim",
+    url = "https://github.com/dracula/vim"
+  },
   ["vim-floaterm"] = {
     loaded = true,
     path = "/home/leandro/.local/share/nvim/site/pack/packer/start/vim-floaterm",
@@ -206,11 +211,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/leandro/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
-  },
-  vimade = {
-    loaded = true,
-    path = "/home/leandro/.local/share/nvim/site/pack/packer/start/vimade",
-    url = "https://github.com/TaDaa/vimade"
   },
   ["which-key.nvim"] = {
     config = { "\27LJ\2\nD\0\0\2\0\4\0\t6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0K\0\1\0\15timeoutlen\ftimeout\6o\bvim\0" },

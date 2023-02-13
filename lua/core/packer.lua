@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
     -- Themes
     use 'sainnhe/gruvbox-material'
     use 'morhetz/gruvbox'
+    use 'dracula/vim'
 
     -- Git
     use 'airblade/vim-gitgutter' -- Git status in gutter
