@@ -23,8 +23,9 @@ return require('packer').startup(function(use)
 
     -- Themes
     use 'sainnhe/gruvbox-material'
-    use 'morhetz/gruvbox'
+    use 'ellisonleao/gruvbox.nvim'
     use 'dracula/vim'
+    use 'olimorris/onedarkpro.nvim'
 
     -- Git
     use 'airblade/vim-gitgutter' -- Git status in gutter
@@ -89,6 +90,10 @@ return require('packer').startup(function(use)
 
     -- Terminal
     use 'voldikss/vim-floaterm'
+
+    -- Startup screen
+    use 'mhinz/vim-startify'
+    
 
     -- Active mode in line indicator
     use {

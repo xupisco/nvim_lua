@@ -30,6 +30,7 @@ wk.register({
         o = { "<cmd>Telescope buffers<cr>", "Buffers" },
         h = { "<cmd>Telescope help_tags<cr>", "Help" },
         s = { function() builtin.grep_string({ search = vim.fn.input("Grep > ") }) end, "Grep" },
+        l = { "<cmd>Telescope live_grep<cr>", "Live grep" },
         ["1"] = "which_key_ignore",  -- special label to hide it in the popup
     },
 }, { prefix = "<leader>" })
