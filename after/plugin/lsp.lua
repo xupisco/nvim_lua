@@ -7,10 +7,12 @@ local lsp = require('lsp-zero').preset({
     suggest_lsp_servers = true,
 })
 
+require('lspconfig.ui.windows').default_options.border = 'solid'
+
 lsp.setup_nvim_cmp({
     documentation = {
         col_offset = 0,
-        border = 'none',
+        border = 'solid',
         side_padding = 4,
         winhighlight = 'Normal:TelescopeNormal,FloatBorder:TelescopeBorder',
         zindex = 1001

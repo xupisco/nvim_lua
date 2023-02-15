@@ -13,7 +13,7 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +64 apps/code/models.py
+badd +37 apps/code/models.py
 badd +26 webpack.config.js
 argglobal
 %argdel
@@ -30,11 +30,11 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 63 - ((29 * winheight(0) + 25) / 51)
+let s:l = 36 - ((35 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 63
+keepjumps 36
 normal! 0
 lcd ~/projects/qrhub
 tabnext 1
