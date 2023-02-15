@@ -26,10 +26,12 @@ function setTheme(theme, set_custom)
     vim.cmd.colorscheme(theme)
 
     if set_custom == true then
-        vim.g.gruvbox_material_background = 'medium'
-        vim.g.gruvbox_material_colors_override = { bg0 = {'#222222', '235'} }
-        vim.g.gruvbox_material_statusline_style = 'default'
-        vim.g.gruvbox_material_foreground = 'original'
+        if theme == 'gruvbox' or 'gruvbox-material' then
+            vim.g.gruvbox_material_background = 'medium'
+            vim.g.gruvbox_material_colors_override = { bg0 = {'#222222', '235'} }
+            vim.g.gruvbox_material_statusline_style = 'default'
+            vim.g.gruvbox_material_foreground = 'original'
+        end
 
         vim.api.nvim_set_hl(0, 'Normal', { bg = '#222222' })
         vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#191919' })
