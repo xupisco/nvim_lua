@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/leandro/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
+  ["cmp-cmdline"] = {
+    loaded = true,
+    path = "/home/leandro/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/leandro/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -186,6 +191,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/leandro/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  rainbow_csv = {
+    loaded = true,
+    path = "/home/leandro/.local/share/nvim/site/pack/packer/start/rainbow_csv",
+    url = "https://github.com/mechatroner/rainbow_csv"
+  },
+  ["symbols-outline.nvim"] = {
+    loaded = true,
+    path = "/home/leandro/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
+    url = "https://github.com/simrat39/symbols-outline.nvim"
+  },
+  ["telescope-command-palette.nvim"] = {
+    loaded = true,
+    path = "/home/leandro/.local/share/nvim/site/pack/packer/start/telescope-command-palette.nvim",
+    url = "https://github.com/LinArcX/telescope-command-palette.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

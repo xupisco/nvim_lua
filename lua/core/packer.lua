@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use { "LinArcX/telescope-command-palette.nvim" }
 
     -- Themes
     use 'sainnhe/gruvbox-material'
@@ -48,6 +49,7 @@ return require('packer').startup(function(use)
 
     -- Syntax Highlight
     use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+    use {'mechatroner/rainbow_csv'} -- CSV Rainbow
 
     -- Shortcuts Helper
     use {
@@ -72,6 +74,7 @@ return require('packer').startup(function(use)
             {'hrsh7th/nvim-cmp'},         -- Required
             {'hrsh7th/cmp-nvim-lsp'},     -- Required
             {'hrsh7th/cmp-buffer'},       -- Optional
+            {'hrsh7th/cmp-cmdline'},
             {'hrsh7th/cmp-path'},         -- Optional
             {'saadparwaiz1/cmp_luasnip'}, -- Optional
             {'hrsh7th/cmp-nvim-lua'},     -- Optional
@@ -81,6 +84,9 @@ return require('packer').startup(function(use)
             {'rafamadriz/friendly-snippets'}, -- Optional
         }
     }
+
+    -- Outline
+    use 'simrat39/symbols-outline.nvim'
 
     -- Better errors
     use {
@@ -93,7 +99,6 @@ return require('packer').startup(function(use)
 
     -- Startup screen
     use 'mhinz/vim-startify'
-    
 
     -- Active mode in line indicator
     use {

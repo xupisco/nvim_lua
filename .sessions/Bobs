@@ -3,7 +3,7 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/projects/qrhub
+cd ~/projects/bobs_reloaded
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -13,16 +13,15 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +42 apps/code/models.py
-badd +2 webpack.config.js
-badd +27 apps/web/views/profile.py
-badd +34 apps/api/views/code.py
+badd +1 README.md
+badd +1 _static/data/lojas_energy.csv
+badd +14 conf/urls.py
+badd +20 ~/projects/bobs_reloaded/apps/web/views/home.py
 argglobal
 %argdel
+edit conf/urls.py
 argglobal
-enew
-file OUTLINE
-balt apps/code/models.py
+balt _static/data/lojas_energy.csv
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -31,7 +30,14 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-lcd ~/projects/qrhub
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 14 - ((13 * winheight(0) + 25) / 50)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 14
+normal! 050|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

@@ -50,6 +50,8 @@ function setTheme(theme, set_custom)
 
         vim.api.nvim_set_hl(0, 'Floaterm', { bg = '#191919' })
         vim.api.nvim_set_hl(0, 'FloatermBorder', { bg = '#191919', })
+
+        vim.api.nvim_set_hl(0, 'FocusedSymbol', { bg = '#a89984', fg='#282828' })
     end
 
 end

@@ -33,3 +33,4 @@ opt.timeoutlen = 500           -- By default timeoutlen is 1000 ms
 opt.clipboard = 'unnamedplus'  -- Copy paste between vim and everything else
 opt.inccommand = 'split'       -- Show command results in real-time
 opt.autochdir = false          -- Your working directory will always be the same as your working directory
+opt.autoread = true
