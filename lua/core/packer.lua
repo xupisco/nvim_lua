@@ -47,6 +47,13 @@ return require('packer').startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
 
+    -- Better buffer line
+    use {
+        'akinsho/bufferline.nvim',
+        tag = "v3.*",
+        requires = 'nvim-tree/nvim-web-devicons'
+    }
+
     -- Syntax Highlight
     use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use {'mechatroner/rainbow_csv'} -- CSV Rainbow

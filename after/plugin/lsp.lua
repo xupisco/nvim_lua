@@ -10,6 +10,10 @@ local lsp = require('lsp-zero').preset({
 require('lspconfig.ui.windows').default_options.border = 'solid'
 
 lsp.setup_nvim_cmp({
+    preselect = 'none',
+    completion = {
+        completeopt = 'menu,menuone,noinsert,noselect'
+    },
     documentation = {
         col_offset = 0,
         border = 'solid',
