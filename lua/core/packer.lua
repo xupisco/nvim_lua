@@ -48,11 +48,11 @@ return require('packer').startup(function(use)
     }
 
     -- Better buffer line
-    use {
-        'akinsho/bufferline.nvim',
-        tag = "v3.*",
-        requires = 'nvim-tree/nvim-web-devicons'
-    }
+    --use {
+    --    'akinsho/bufferline.nvim',
+    --    tag = "v3.*",
+    --    requires = 'nvim-tree/nvim-web-devicons'
+    --}
 
     -- Syntax Highlight
     use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
