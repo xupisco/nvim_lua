@@ -47,6 +47,15 @@ return require('packer').startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
 
+    use({
+        "utilyre/barbecue.nvim",
+        tag = "*",
+        requires = {
+            "SmiteshP/nvim-navic",
+            "nvim-tree/nvim-web-devicons", -- optional dependency
+        },
+    })
+
     -- Better buffer line
     --use {
     --    'akinsho/bufferline.nvim',
@@ -93,7 +102,15 @@ return require('packer').startup(function(use)
     }
 
     -- Outline
-    use 'simrat39/symbols-outline.nvim'
+    use {
+        'simrat39/symbols-outline.nvim',
+        config = function()
+            require('symbols-outline').setup({
+                position = 'left',
+                show_guides = 'false'
+            })
+        end
+    }
 
     -- Better errors
     use {

@@ -13,16 +13,13 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +49 apps/code/models.py
-badd +7 webpack.config.js
-badd +86 apps/web/views/profile.py
-badd +34 apps/api/views/code.py
+badd +4 apps/code/models.py
 argglobal
 %argdel
 argglobal
 enew
 file OUTLINE
-balt apps/web/views/profile.py
+balt apps/code/models.py
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
