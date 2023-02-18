@@ -47,6 +47,7 @@ return require('packer').startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
 
+    -- Winline with outline
     use({
         "utilyre/barbecue.nvim",
         tag = "*",
@@ -55,13 +56,6 @@ return require('packer').startup(function(use)
             "nvim-tree/nvim-web-devicons", -- optional dependency
         },
     })
-
-    -- Better buffer line
-    --use {
-    --    'akinsho/bufferline.nvim',
-    --    tag = "v3.*",
-    --    requires = 'nvim-tree/nvim-web-devicons'
-    --}
 
     -- Syntax Highlight
     use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
@@ -102,15 +96,7 @@ return require('packer').startup(function(use)
     }
 
     -- Outline
-    use {
-        'simrat39/symbols-outline.nvim',
-        config = function()
-            require('symbols-outline').setup({
-                position = 'left',
-                show_guides = 'false'
-            })
-        end
-    }
+    use { 'simrat39/symbols-outline.nvim' }
 
     -- Better errors
     use {
