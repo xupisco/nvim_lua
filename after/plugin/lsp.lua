@@ -12,6 +12,8 @@ require('lspconfig.ui.windows').default_options.border = 'solid'
 lsp.setup_nvim_cmp({
     preselect = 'none',
     completion = {
+        border = 'none',
+        side_padding = 0,
         completeopt = 'menu,menuone,noinsert,noselect'
     },
     documentation = {
@@ -31,9 +33,9 @@ vim.api.nvim_create_autocmd("CursorHold", {
         local opts = {
             focusable = false,
             close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
-            border = 'rounded',
+            border = 'solid',
             source = 'always',
-            prefix = ' ',
+            side_padding = 4,
             scope = 'cursor',
         }
         vim.diagnostic.open_float(nil, opts)

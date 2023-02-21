@@ -13,11 +13,13 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +35 apps/web/views/dashboard.py
+badd +62 apps/web/views/dashboard.py
+badd +72 apps/code/models.py
 argglobal
 %argdel
-edit apps/web/views/dashboard.py
+edit apps/code/models.py
 argglobal
+balt apps/web/views/dashboard.py
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -28,12 +30,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 117 - ((15 * winheight(0) + 24) / 49)
+let s:l = 104 - ((25 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 117
-normal! 046|
+keepjumps 104
+normal! 038|
 lcd ~/projects/qrhub
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'

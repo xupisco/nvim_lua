@@ -104,6 +104,9 @@ return require('packer').startup(function(use)
         requires = "nvim-tree/nvim-web-devicons",
     }
 
+    -- Indent blocks
+    use "lukas-reineke/indent-blankline.nvim"
+
     -- Terminal
     use 'voldikss/vim-floaterm'
 
