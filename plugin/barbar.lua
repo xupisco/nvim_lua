@@ -4,6 +4,17 @@ vim.api.nvim_set_hl(0, 'BufferCurrentMod', { bg = '#222222' })
 vim.api.nvim_set_hl(0, 'BufferCurrentSign', { bg = '#222222' })
 vim.api.nvim_set_hl(0, 'BufferCurrentIcon', { bg = '#222222' })
 vim.api.nvim_set_hl(0, 'BufferCurrentIndex', { bg = '#222222' })
+
+vim.api.nvim_set_hl(0, 'BufferCurrentError', { bg = '#222222' })
+vim.api.nvim_set_hl(0, 'BufferCurrentWarn', { bg = '#222222' })
+vim.api.nvim_set_hl(0, 'BufferCurrentInfo', { bg = '#222222' })
+vim.api.nvim_set_hl(0, 'BufferCurrentHint', { bg = '#222222' })
+
+vim.api.nvim_set_hl(0, 'BufferVisibleError', { bg = '#1b1b1b' })
+vim.api.nvim_set_hl(0, 'BufferVisibleWarn', { bg = '#1b1b1b' })
+vim.api.nvim_set_hl(0, 'BufferVisibleInfo', { bg = '#1b1b1b' })
+vim.api.nvim_set_hl(0, 'BufferVisibleHint', { bg = '#1b1b1b' })
+
 vim.api.nvim_set_hl(0, 'BufferTabpages', { bg = '#ff0000' })
 vim.api.nvim_set_hl(0, 'BufferTabpageFill', { bg = '#1b1b1b', link = 'BufferDefaultCurrentIcon' })
 
@@ -51,6 +62,14 @@ map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 
 require'bufferline'.setup {
     highlight_alternate = false,
+
+    diagnostics = {
+        -- you can use a list
+        {enabled = false}, -- ERROR
+        {enabled = false}, -- WARN
+        {enabled = false}, -- INFO
+        {enabled = false},  -- HINT
+    },
 
     icons = true,
     icon_separator_active = '',
