@@ -36,10 +36,10 @@ default_opts = {
         lualine_z = {}
     },
     tabline = {
-      lualine_a = {'buffers'},
-      lualine_x = {'filename'},
-      lualine_y = {'branch'},
-      lualine_z = {'tabs'}
+      --lualine_a = {'buffers'},
+      --lualine_x = {'filename'},
+      --lualine_y = {'branch'},
+      --lualine_z = {'tabs'}
     },
     winbar = {
     },

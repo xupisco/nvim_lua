@@ -22,6 +22,9 @@ return require('packer').startup(function(use)
     }
     use { "LinArcX/telescope-command-palette.nvim" }
 
+    -- Ranger within Vim
+    use { "kevinhwang91/rnvimr" }
+
     -- Themes
     use 'sainnhe/gruvbox-material'
     use 'ellisonleao/gruvbox.nvim'
@@ -47,6 +50,9 @@ return require('packer').startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
 
+    -- Better tabline
+    use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+
     -- Winline with outline
     use({
         "utilyre/barbecue.nvim",
@@ -59,7 +65,16 @@ return require('packer').startup(function(use)
 
     -- Syntax Highlight
     use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+    use ('mrjones2014/nvim-ts-rainbow')
     use {'mechatroner/rainbow_csv'} -- CSV Rainbow
+
+    -- Quick comments
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
 
     -- Shortcuts Helper
     use {

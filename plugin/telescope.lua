@@ -2,7 +2,9 @@ require('telescope').setup({
     defaults = {
         layout_strategy = 'vertical',
         layout_config = { preview_height = 0.6 },
-        theme = 'dropdown',
+        --theme = 'ivy',
+        border = {},
+        borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' }, 
         -- other layout configuration here
         -- other defaults configuration here
     },

@@ -19,7 +19,7 @@ require("nvim-tree").setup()
 require("nvim-tree").setup({
     sort_by = "case_sensitive",
     view = {
-        width = 30,
+        width = 25,
         mappings = {
             list = {
                 { key = "u", action = "dir_up" },
@@ -46,7 +46,7 @@ require("nvim-tree").setup({
     },
     actions = {
         open_file = {
-            quit_on_open = false,
+            quit_on_open = true,
             resize_window = true,
         },
         remove_file = {

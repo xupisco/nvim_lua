@@ -15,12 +15,26 @@ function setTheme(theme, set_custom)
             vim.g.gruvbox_material_foreground = 'original'
         end
 
+        vim.api.nvim_set_hl(0, 'NonText', { bg = '#191919' })
+        vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = '#202020' })
         vim.api.nvim_set_hl(0, 'Normal', { bg = '#222222' })
         vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#191919' })
-        vim.api.nvim_set_hl(0, 'TelescopeNormal', {bg = '#191919' })
-        vim.api.nvim_set_hl(0, 'TelescopeBorder', {bg = '#191919' })
         vim.api.nvim_set_hl(0, 'Float', { bg = '#191919' })
         vim.api.nvim_set_hl(0, 'FloatBorder', { bg = '#191919' })
+
+        -- Nvim-Tree
+        vim.api.nvim_set_hl(0, 'NvimTreeNormal', { bg = '#191919' })
+        vim.api.nvim_set_hl(0, 'NvimTreeEndOfBuffer', { bg = '#191919', fg = '#191919' })
+        vim.api.nvim_set_hl(0, 'NvimTreeNormalNC', { bg = '#191919' })
+
+        -- Telescope
+        vim.api.nvim_set_hl(0, 'TelescopeNormal', { bg = '#191919' })
+        vim.api.nvim_set_hl(0, 'TelescopeBorder', { bg = '#191919', fg = '#191919' })
+        vim.api.nvim_set_hl(0, 'TelescopePromptBorder', { bg = '#161616', fg = '#161616' })
+        vim.api.nvim_set_hl(0, 'TelescopePromptNormal', { bg = '#161616', fg = '#ebdbb2' })
+        vim.api.nvim_set_hl(0, 'TelescopePromptTitle', { bg = '#161616', fg = '#fbf1c7' })
+        vim.api.nvim_set_hl(0, 'TelescopePeviewTitle', { bg = '#191919', fg = '#fbf1c7' })
+        vim.api.nvim_set_hl(0, 'TelescopeResultsTitle', { bg = '#191919', fg = '#fbf1c7' })
 
         vim.api.nvim_set_hl(0, 'Pmenu', { bg = '#191919' })
         vim.api.nvim_set_hl(0, 'PmenuSel', { bg = '#ebdbb2', fg = '#191919' })
@@ -34,6 +48,16 @@ function setTheme(theme, set_custom)
         vim.api.nvim_set_hl(0, 'FloatermBorder', { bg = '#191919', })
 
         vim.api.nvim_set_hl(0, 'FocusedSymbol', { bg = '#a89984', fg='#282828' })
+
+        -- Barbar
+        vim.api.nvim_set_hl(0, 'BufferCurrent', { bg = '#222222' })
+        vim.api.nvim_set_hl(0, 'BufferCurrentIndex', { bg = '#222222' })
+        vim.api.nvim_set_hl(0, 'BufferCurrentMod', { bg = '#222222' })
+        vim.api.nvim_set_hl(0, 'BufferCurrentSign', { bg = '#222222' })
+        vim.api.nvim_set_hl(0, 'BufferCurrentIcon', { bg = '#222222' })
+        vim.api.nvim_set_hl(0, 'BufferCurrentIndex', { bg = '#222222' })
+        vim.api.nvim_set_hl(0, 'BufferTabpages', { bg = '#ff0000' })
+        vim.api.nvim_set_hl(0, 'BufferTabpageFill', { bg = '#1b1b1b', link = 'BufferDefaultCurrentIcon' })
     end
 
 end
@@ -55,5 +79,5 @@ require("gruvbox").setup({
     palette_overrides = {},
     overrides = {},
     dim_inactive = false,
-    transparent_mode = true,
+    transparent_mode = false,
 })

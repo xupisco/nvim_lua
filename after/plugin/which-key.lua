@@ -19,6 +19,7 @@ wk.register({
     ["<leader>ee"] = { ":NvimTreeFindFileToggle<CR>", "File Explorer (select)" },
     ["<leader>q"] = { ":nohl<CR>", "Clear search" },
     ["<leader>c"] = { ":bp | sp | bn | bd<CR>", "Delete buffer" },
+    ["<leader>r"] = { ":RnvimrToggle<CR>", "Ranger" },
     ["h"] = { name = "Git Gutter" },
 })
 
