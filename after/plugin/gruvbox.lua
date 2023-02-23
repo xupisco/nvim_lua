@@ -23,9 +23,10 @@ function setTheme(theme, set_custom)
         vim.api.nvim_set_hl(0, 'FloatBorder', { bg = '#191919' })
 
         -- Nvim-Tree
-        vim.api.nvim_set_hl(0, 'NvimTreeNormal', { bg = '#191919' })
-        vim.api.nvim_set_hl(0, 'NvimTreeEndOfBuffer', { bg = '#191919', fg = '#191919' })
-        vim.api.nvim_set_hl(0, 'NvimTreeNormalNC', { bg = '#191919' })
+        vim.api.nvim_set_hl(0, 'NvimTreeNormal', { bg = '#222222' })
+        vim.api.nvim_set_hl(0, 'NvimTreeEndOfBuffer', { bg = '#222222', fg = '#222222' })
+        vim.api.nvim_set_hl(0, 'NvimTreeNormalNC', { bg = '#222222' })
+        vim.api.nvim_set_hl(0, 'VertSplit', { fg = '#222222', bg = '#222222' })
 
         -- Telescope
         vim.api.nvim_set_hl(0, 'TelescopeNormal', { bg = '#191919' })

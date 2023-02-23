@@ -25,6 +25,12 @@ lsp.setup_nvim_cmp({
     }
 })
 
+lsp.configure('pyright', {
+    settings = {
+        reportUnusedVariable = false
+    }
+})
+
 lsp.setup()
 
 vim.api.nvim_create_autocmd("CursorHold", {

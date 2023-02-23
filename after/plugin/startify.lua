@@ -1,7 +1,8 @@
 vim.g.startify_session_dir = '~/.config/nvim/.sessions'
-vim.g.startify_change_to_vcs_root = 1
-vim.g.startify_session_persistence = 1
-vim.g.startify_session_delete_buffers = 1
+vim.g.startify_change_to_vcs_root = true
+vim.g.startify_change_to_dir = true
+vim.g.startify_session_persistence = true
+vim.g.startify_session_delete_buffers = true
 
 vim.g['startify_lists'] = {
     { type = 'sessions',  header = {'   Sessions'}                      },
