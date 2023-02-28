@@ -12,9 +12,6 @@ local height = 40
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
--- empty setup using defaults
-require("nvim-tree").setup()
-
 -- OR setup with some options
 require("nvim-tree").setup({
     sort_by = "case_sensitive",
@@ -43,6 +40,9 @@ require("nvim-tree").setup({
     },
     renderer = {
         group_empty = true,
+        icons = {
+            git_placement = 'after',
+        },
     },
     filters = {
         dotfiles = true,

@@ -14,12 +14,13 @@ wk.register({
     ["<C-t>"] = { ":TroubleToggle<CR>", "Trouble!" },
     ["<leader>p"] = { ":Telescope command_palette<CR>", "Command Palette" },
     ["<leader>o"] = { ":SymbolsOutline<CR>", "Symbols Outline" },
-    ["<leader>r"] = { ":source $MYVIMRC<CR>", "Reload settings" },
+    ["<leader>rr"] = { ":source $MYVIMRC<CR>", "Reload settings" },
     ["<leader>e"] = { ":NvimTreeToggle<CR>", "File Explorer" },
     ["<leader>ee"] = { ":NvimTreeFindFileToggle<CR>", "File Explorer (select)" },
     ["<leader>q"] = { ":nohl<CR>", "Clear search" },
     ["<leader>c"] = { ":bp | sp | bn | bd<CR>", "Delete buffer" },
     ["<leader>r"] = { ":RnvimrToggle<CR>", "Ranger" },
+["<leader>b"] = { ":lua require('barbecue.ui').toggle()<CR>", "Toggle Barbebue" },
     ["h"] = { name = "Git Gutter" },
 })
 
@@ -30,6 +31,7 @@ wk.register({
         f = { "<cmd>Telescope find_files<cr>", "Files" },
         p = { "<cmd>Telescope git_files<cr>", "Git" },
         r = { "<cmd>Telescope oldfiles<cr>", "Recents" },
+        k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
         o = { "<cmd>Telescope buffers<cr>", "Buffers" },
         h = { "<cmd>Telescope help_tags<cr>", "Help" },
         s = { "<cmd>Telescope lsp_document_symbols<cr>", "Buffer symbols" },

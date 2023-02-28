@@ -6,7 +6,7 @@ require("barbecue").setup({
         -- this highlight is used to override other highlights
         -- you can take advantage of its `bg` and set a background throughout your winbar
         -- (e.g. basename will look like this: { fg = "#c0caf5", bold = true })
-        normal = { fg = "#a89984", bg = "#222222" },
+        normal = { fg = "#a89984", bg = "#32302f" },
 
         -- these highlights correspond to symbols table from config
         ellipsis = { fg = "#706658" },
