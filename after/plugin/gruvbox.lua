@@ -18,6 +18,7 @@ function setTheme(theme, set_custom)
         vim.api.nvim_set_hl(0, 'NonText', { bg = '#191919' })
         vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = '#202020' })
         vim.api.nvim_set_hl(0, 'Normal', { bg = '#262626' })
+        vim.api.nvim_set_hl(0, 'NormalNC', { bg = '#323232' })
         vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#191919' })
         vim.api.nvim_set_hl(0, 'Float', { bg = '#191919' })
         vim.api.nvim_set_hl(0, 'FloatBorder', { bg = '#191919' })
@@ -43,8 +44,9 @@ function setTheme(theme, set_custom)
 
         vim.api.nvim_set_hl(0, 'DiagnosticFloatingError', { bg = '#191919', fg = '#cc5547' })
         vim.api.nvim_set_hl(0, 'DiagnosticFloatingHint', { bg = '#191919', fg = '#83A598' })
-        vim.api.nvim_set_hl(0, 'DiagnosticFloatingWarning', { bg = '#1fd143', fg = '#FABD2F' })
-        vim.api.nvim_set_hl(0, 'DiagnosticFloatingInfo', { bg = '#db27d5', })
+        vim.api.nvim_set_hl(0, 'DiagnosticFloatingWarn', { bg = '#191919', fg = '#FABD2F' })
+        vim.api.nvim_set_hl(0, 'DiagnosticFloatingWarning', { bg = '#191919', fg = '#FABD2F' })
+        vim.api.nvim_set_hl(0, 'DiagnosticFloatingInfo', { bg = '#191919', })
 
         vim.api.nvim_set_hl(0, 'Floaterm', { bg = '#191919' })
         vim.api.nvim_set_hl(0, 'FloatermBorder', { bg = '#191919', })
@@ -81,6 +83,6 @@ vim.api.nvim_set_hl(0, 'BufferTabpageFill', { bg = '#222222' })
 --    contrast = 'hard', -- can be "hard", "soft" or empty string
 --    palette_overrides = {},
 --    overrides = {},
---    dim_inactive = false,
+--    dim_inactive = true,
 --    transparent_mode = false,
 --})
