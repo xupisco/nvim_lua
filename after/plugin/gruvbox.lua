@@ -18,7 +18,7 @@ function setTheme(theme, set_custom)
         vim.api.nvim_set_hl(0, 'NonText', { bg = '#191919' })
         vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = '#202020' })
         vim.api.nvim_set_hl(0, 'Normal', { bg = '#262626' })
-        vim.api.nvim_set_hl(0, 'NormalNC', { bg = '#323232' })
+        vim.api.nvim_set_hl(0, 'NormalNC', { bg = '#343434' })
         vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#191919' })
         vim.api.nvim_set_hl(0, 'Float', { bg = '#191919' })
         vim.api.nvim_set_hl(0, 'FloatBorder', { bg = '#191919' })
@@ -67,7 +67,24 @@ function setTheme(theme, set_custom)
 end
 
 setTheme('gruvbox-material', true)
+
 vim.api.nvim_set_hl(0, 'BufferTabpageFill', { bg = '#222222' })
+
+vim.api.nvim_set_hl(0, 'BufferInactive', { bg = '#191919', fg = '#504945' })
+vim.api.nvim_set_hl(0, 'BufferInactiveIndex', { bg = '#191919' })
+vim.api.nvim_set_hl(0, 'BufferInactiveMod', { bg = '#191919' })
+vim.api.nvim_set_hl(0, 'BufferInactiveSign', { bg = '#191919' })
+vim.api.nvim_set_hl(0, 'BufferInactiveIcon', { bg = '#191919' })
+vim.api.nvim_set_hl(0, 'BufferInactiveIndex', { bg = '#191919' })
+
+
+vim.api.nvim_set_hl(0, 'BufferVisible', { bg = '#191919' })
+vim.api.nvim_set_hl(0, 'BufferVisibleIndex', { bg = '#191919' })
+vim.api.nvim_set_hl(0, 'BufferVisibleMod', { bg = '#191919' })
+vim.api.nvim_set_hl(0, 'BufferVisibleSign', { bg = '#191919' })
+vim.api.nvim_set_hl(0, 'BufferVisibleIcon', { bg = '#191919' })
+vim.api.nvim_set_hl(0, 'BufferVisibleIndex', { bg = '#191919' })
+
 
 --require("gruvbox").setup({
 --    undercurl = true,
