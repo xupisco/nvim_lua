@@ -29,8 +29,10 @@ wk.register({
     f = {
         name = "Files", -- optional group name
         f = { "<cmd>Telescope find_files<cr>", "Files" },
-        p = { "<cmd>Telescope git_files<cr>", "Git" },
+        a = { "<cmd>Telescope find_files hidden=true<cr>", "All files" },
+        f = { "<cmd>Telescope find_files<cr>", "Files" },
         r = { "<cmd>Telescope oldfiles<cr>", "Recents" },
+        d = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Buffer diagnostics" },
         k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
         o = { "<cmd>Telescope buffers<cr>", "Buffers" },
         h = { "<cmd>Telescope help_tags<cr>", "Help" },

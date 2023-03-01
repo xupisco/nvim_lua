@@ -27,7 +27,7 @@ function setTheme(theme, set_custom)
         vim.api.nvim_set_hl(0, 'NvimTreeNormal', { bg = '#222222' })
         vim.api.nvim_set_hl(0, 'NvimTreeEndOfBuffer', { bg = '#222222', fg = '#303030' })
         vim.api.nvim_set_hl(0, 'NvimTreeNormalNC', { bg = '#222222' })
-        vim.api.nvim_set_hl(0, 'NvimTreeWinSeparator', { bg = '#262626', fg = '#262626' })
+        vim.api.nvim_set_hl(0, 'NvimTreeWinSeparator', { bg = '#222222', fg = '#222222' })
         vim.api.nvim_set_hl(0, 'VertSplit', { fg = '#222222', bg = '#222222' })
 
         -- Telescope
@@ -78,7 +78,7 @@ vim.api.nvim_set_hl(0, 'BufferInactiveIcon', { bg = '#191919' })
 vim.api.nvim_set_hl(0, 'BufferInactiveIndex', { bg = '#191919' })
 
 
-vim.api.nvim_set_hl(0, 'BufferVisible', { bg = '#191919' })
+vim.api.nvim_set_hl(0, 'BufferVisible', { bg = '#191919', fg = '#504945' })
 vim.api.nvim_set_hl(0, 'BufferVisibleIndex', { bg = '#191919' })
 vim.api.nvim_set_hl(0, 'BufferVisibleMod', { bg = '#191919' })
 vim.api.nvim_set_hl(0, 'BufferVisibleSign', { bg = '#191919' })
