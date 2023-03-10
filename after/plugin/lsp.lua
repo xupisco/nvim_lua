@@ -14,8 +14,8 @@ lsp.setup_nvim_cmp({
     preselect = 'none',
     completion = {
         border = 'none',
-        side_padding = 0,
-        completeopt = 'menuone,noinsert'
+        side_padding = 4,
+        completeopt = 'menuone,noinsert,preview'
     },
     mapping = {
         ['<Tab>'] = function(fallback)

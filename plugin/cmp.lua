@@ -4,7 +4,7 @@ cmp.setup({
     completion = {
         preselect = 'none',
         --completeopt = 'menu,menuone,noinsert,noselect',
-        completeopt = 'menuone,preview,noinsert',
+        completeopt = 'menuone,noinsert,preview',
     },
 
     mapping = {
@@ -18,6 +18,8 @@ cmp.setup({
             i = cmp.mapping.abort(),
             c = cmp.mapping.close(),
         }),
+        ["<PageUp>"] = cmp.mapping.select_prev_item({count = 7}),
+        ["<PageDown>"] = cmp.mapping.select_next_item({count = 7}),
         ["<CR>"] = cmp.mapping.confirm({
             behavior = cmp.ConfirmBehavior.Replace,
             select = true,
