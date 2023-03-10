@@ -20,7 +20,6 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-    use { "LinArcX/telescope-command-palette.nvim" }
 
     -- Ranger within Vim
     use { "kevinhwang91/rnvimr" }
@@ -75,6 +74,13 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
+
+    -- Auto close stuff
+    use {
+    	"windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+    use ('alvan/vim-closetag')
 
     -- Shortcuts Helper
     use {

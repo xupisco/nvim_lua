@@ -1,9 +1,10 @@
 local cmp = require('cmp')
 
 cmp.setup({
-    commpletion = {
+    completion = {
         preselect = 'none',
-        completeopt = 'menu,menuone,noinsert,noselect'
+        --completeopt = 'menu,menuone,noinsert,noselect',
+        completeopt = 'menuone,preview,noinsert',
     },
 
     mapping = {
@@ -23,7 +24,7 @@ cmp.setup({
         }),
         ['<Tab>'] = function(fallback)
             if cmp.visible() then
-                cmp.select_next_item()
+                cmp.confirm()
             else
                 fallback()
             end

@@ -1,5 +1,6 @@
 vim.opt.signcolumn = 'yes'
 
+local cmp = require('cmp')
 local lsp = require('lsp-zero').preset({
     name = 'minimal',
     set_lsp_keymaps = true,
@@ -14,7 +15,16 @@ lsp.setup_nvim_cmp({
     completion = {
         border = 'none',
         side_padding = 0,
-        completeopt = 'menu,menuone,noinsert,noselect'
+        completeopt = 'menuone,noinsert'
+    },
+    mapping = {
+        ['<Tab>'] = function(fallback)
+            if cmp.visible() then
+                cmp.confirm()
+            else
+                fallback()
+            end
+        end,
     },
     documentation = {
         col_offset = 0,
@@ -31,7 +41,15 @@ lsp.configure('pyright', {
     }
 })
 
+lsp.configure('emmet_ls', {
+    filetypes = { 'html', 'htmldjango', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
+})
+
 lsp.setup()
+
+vim.diagnostic.config({
+    virtual_text = true,
+})
 
 vim.api.nvim_create_autocmd("CursorHold", {
     buffer = bufnr,

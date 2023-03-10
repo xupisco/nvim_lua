@@ -12,7 +12,6 @@ local builtin = require('telescope.builtin')
 
 wk.register({
     ["<C-t>"] = { ":TroubleToggle<CR>", "Trouble!" },
-    ["<leader>p"] = { ":Telescope command_palette<CR>", "Command Palette" },
     ["<leader>o"] = { ":SymbolsOutline<CR>", "Symbols Outline" },
     ["<leader>rr"] = { ":source $MYVIMRC<CR>", "Reload settings" },
     ["<leader>e"] = { ":NvimTreeToggle<CR>", "File Explorer" },
