@@ -11,7 +11,7 @@ local builtin = require('telescope.builtin')
 -- and hide <leader>1
 
 wk.register({
-    ["<C-t>"] = { ":TroubleToggle<CR>", "Trouble!" },
+    ["<leader>t"] = { ":TroubleToggle<CR>", "Trouble!" },
     ["<leader>o"] = { ":SymbolsOutline<CR>", "Symbols Outline" },
     ["<leader>rr"] = { ":source $MYVIMRC<CR>", "Reload settings" },
     ["<leader>e"] = { ":NvimTreeToggle<CR>", "File Explorer" },
@@ -19,6 +19,7 @@ wk.register({
     ["<leader>q"] = { ":nohl<CR>", "Clear search" },
     ["<leader>c"] = { ":bp | sp | bn | bd<CR>", "Delete buffer" },
     ["<leader>r"] = { ":RnvimrToggle<CR>", "Ranger" },
+    ["<leader>m"] = { ":MinimapToggle<CR>", "Minimap Toggle" },
 ["<leader>b"] = { ":lua require('barbecue.ui').toggle()<CR>", "Toggle Barbebue" },
     ["h"] = { name = "Git Gutter" },
 })
@@ -29,7 +30,6 @@ wk.register({
         name = "Files", -- optional group name
         f = { "<cmd>Telescope find_files<cr>", "Files" },
         a = { "<cmd>Telescope find_files hidden=true<cr>", "All files" },
-        f = { "<cmd>Telescope find_files<cr>", "Files" },
         r = { "<cmd>Telescope oldfiles<cr>", "Recents" },
         d = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Buffer diagnostics" },
         k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },

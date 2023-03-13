@@ -42,15 +42,18 @@ function setTheme(theme, set_custom)
         vim.api.nvim_set_hl(0, 'Pmenu', { bg = '#191919' })
         vim.api.nvim_set_hl(0, 'PmenuSel', { bg = '#ebdbb2', fg = '#191919' })
 
-        vim.api.nvim_set_hl(0, 'DiagnosticFloatingError', { bg = '#191919', fg = '#cc5547' })
-        vim.api.nvim_set_hl(0, 'DiagnosticFloatingHint', { bg = '#191919', fg = '#83A598' })
-        vim.api.nvim_set_hl(0, 'DiagnosticFloatingWarn', { bg = '#191919', fg = '#FABD2F' })
-        vim.api.nvim_set_hl(0, 'DiagnosticFloatingWarning', { bg = '#191919', fg = '#FABD2F' })
-        vim.api.nvim_set_hl(0, 'DiagnosticFloatingInfo', { bg = '#191919', })
+        vim.api.nvim_set_hl(0, 'DiagnosticFloatingError', { fg = '#DC4E27', bg = '#191919' })
+        vim.api.nvim_set_hl(0, 'DiagnosticFloatingHint', { fg = '#579DA3', bg = '#191919' })
+        vim.api.nvim_set_hl(0, 'DiagnosticFloatingWarn', { fg = '#C6933D', bg = '#191919' })
+        vim.api.nvim_set_hl(0, 'DiagnosticFloatingWarning', { fg = '#C6933D', bg = '#191919' })
+        vim.api.nvim_set_hl(0, 'DiagnosticFloatingInfo', { fg = '#616161', bg = '#191919' })
+        vim.api.nvim_set_hl(0, 'DiagnosticFloatingInformation', { fg = '#616161', bg = '#191919' })
 
-        vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextError', { fg = '#91423f' })
-        vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextWarn', { fg = '#695f4d' })
-        vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextHint', { fg = '#5f8778' })
+        vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextError', { bg = '#402C2B', fg = '#DC4E27' })
+        vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextWarn', { bg = '#312E28', fg = '#C6933D' })
+        vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextWarning', { bg = '#312E28', fg = '#C6933D' })
+        vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextHint', { bg = '#272F30', fg = '#579DA3' })
+        vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextInfo', { bg = '#2B2B2B', fg = '#616161' })
 
         vim.api.nvim_set_hl(0, 'Floaterm', { bg = '#191919' })
         vim.api.nvim_set_hl(0, 'FloatermBorder', { bg = '#191919', })
@@ -69,6 +72,17 @@ function setTheme(theme, set_custom)
     end
 
 end
+
+local signs = {
+    DiagnosticSignError = ' ',
+    DiagnosticSignWarn = ' ',
+    DiagnosticSignHint = ' ',
+    DiagnosticSignInfo = ' '
+}
+
+--for hl, icon in pairs(signs) do
+--    vim.fn.sign_define(hl, { text = icon })
+--end
 
 setTheme('gruvbox-material', true)
 
